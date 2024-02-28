@@ -1,0 +1,93 @@
+﻿@{
+    ViewData["Title"] = "CadUsu";
+}
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="text-center">
+        <h2 class="display-4">Cadastre-se</h2>
+    </div>
+    <br />
+    <div>
+        <h2>Cadastro do Usuário</h2>
+    </div>
+    <br />
+
+    <br />
+    <div>
+        <form action="processar_cadastro.php" method="post">
+            <!-- Id Entregador -->
+            <label for="IdUsu">Id do entregador:</label>
+            <input type="text" id="IdUsu" name="IdUsu" required>
+
+            <br>
+            <br>
+
+            <!-- Campo Nome -->
+            <label for="NomeUsu">Nome:</label>
+            <input type="text" id="NomeUsu" name="NomeUsu" required>
+
+            <br>
+            <br>
+
+            <!-- Campo CNPJ -->
+            <label for="CnpjUsu">CNPJ:</label>
+            <input type="text" id="CnpjUsu" name="CnpjUsu" required>
+
+            <br>
+            <br>
+
+            <!-- Campo Data de Nascimento -->
+            <label for="DnUsu">Data de nascimento:</label>
+            <input type="date" id="DnUsu" name="DnUsu" required>
+
+            <br>
+            <br>
+
+            <!-- Campo CNH -->
+            <label for="CnhUsu">CNH:</label>
+            <input type="text" id="CnhUsu" name="CnhUsu" required>
+
+            <br>
+            <br>
+
+            <!-- Campo CNH tipo -->
+            <label for="CnhTUsu">Tipo de CNH:</label>
+
+            <select name="CnhTUsu">
+                <option value="cnh">CNH</option>
+                <option value="a">A</option>
+                <option value="b">B</option>
+                <option value="ab">A+B</option>
+            </select>
+
+            <br>
+            <br>
+
+            <!-- Campo CNH -->
+            <label for="CnhUsuFoto">Foto da CNH:</label>
+            <input type="file" id="CnhUsuFoto" name="CnhUsuFoto" class="btn btn-success" accept="image/png, image/jpeg" multiple />
+
+            <br>
+            <br>
+
+            <!-- Botão de Envio -->
+
+            <button role="button" class="btn btn-primary" >Cadastrar</button>
+
+            <br>
+            <br>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <a class="btn btn-primary" asp-controller="CadUsu" asp-action="CadMoto">Próximo></a>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

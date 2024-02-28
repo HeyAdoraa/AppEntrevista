@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Cadastro";
+}
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="text-center">
+        <h2 class="display-4">Cadastre sua moto</h2>
+    </div>
+    <br />
+    <h2>Cadastro da Moto</h2>
+    <br />
+    <div>
+        <form action="processar_cadastro.php" method="post">
+            <!-- Id Moto -->
+            <label for="idMoto">Id da moto:</label>
+            <input type="text" id="idMoto" name="idMoto" required>
+
+            <br>
+            <br>
+
+            <!-- Campo Ano -->
+            <label for="anoMoto">Ano:</label>
+            <input type="text" id="anoMoto" name="anoMoto" required>
+
+            <br>
+            <br>
+
+            <!-- Campo Modelo -->
+            <label for="modeloMoto">Modelo:</label>
+            <input type="text" id="modeloMoto" name="modeloMoto" required>
+
+            <br>
+            <br>
+
+            <!-- Campo Placa -->
+            <label for="placaMoto">Placa:</label>
+            <input type="text" id="placaMoto" name="placaMoto" required>
+
+            <br>
+            <br>
+
+            <!-- Botão de Envio -->
+
+            <button role="button" class="btn btn-primary" asp-controller="Home" asp-action="CadMoto">Cadastrar</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
+
